@@ -1,10 +1,11 @@
+import HomeHeader from "@/components/HomeHeader";
 import React from "react";
 
 const Home = () => {
   return (
-    <div>
-      <h2 className="bg-blue-400">Home</h2>
-    </div>
+    <>
+      <HomeHeader />
+    </>
   );
 };
 
