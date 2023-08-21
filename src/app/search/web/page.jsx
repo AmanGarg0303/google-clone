@@ -1,7 +1,10 @@
+import WebSearchResults from "@/components/WebSearchResults";
 import Link from "next/link";
 import React from "react";
 
 const WebSearchPage = async ({ searchParams }) => {
+  await new Promise((resolve) => setTimeout(resolve, 2000));
+
   const res = await fetch(
     `https://www.googleapis.com/customsearch/v1?key=${process.env.GOOGLE_API_KEY}&cx=${process.env.GOOGLE_CONTEXT_KEY}&q=${searchParams.searchTerm}`
   );
@@ -27,7 +30,7 @@ const WebSearchPage = async ({ searchParams }) => {
     );
   }
 
-  return <>{result && result.map((r) => <h1 key={r.id}>{r.title}</h1>)}</>;
+  return <>{result && <WebSearchResults results={data} />}</>;
 };
 
 export default WebSearchPage;
