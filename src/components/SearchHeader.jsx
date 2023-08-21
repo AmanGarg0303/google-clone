@@ -19,9 +19,10 @@ const SearchHeader = () => {
           />
         </Link>
 
-        <div className="flex-1">
+        <div className="flex-1 hidden sm:inline-flex">
           <SearchBox />
         </div>
+
         <div className="hidden md:inline-flex space-x-2 ">
           <RiSettings3Line className="header-icon" />
           <TbGridDots className="header-icon" />
@@ -30,6 +31,10 @@ const SearchHeader = () => {
         <button className="bg-blue-500 text-white px-6 py-2 font-medium rounded-md hover:brightness-105 hover:shadow-md transition-all ml-2">
           Sign in
         </button>
+      </div>
+
+      <div className="sm:hidden mb-4 w-full">
+        <SearchBox />
       </div>
 
       <SearchHeaderOptions />
