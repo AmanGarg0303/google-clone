@@ -11,7 +11,6 @@ const SearchBox = () => {
   const searchTerm = searchParams.get("searchTerm");
   const [term, setTerm] = useState(searchTerm || "");
 
-  console.log(term);
   const router = useRouter();
 
   const handleSubmit = (e) => {
